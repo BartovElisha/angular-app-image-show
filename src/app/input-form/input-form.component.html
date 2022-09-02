@@ -1,0 +1,13 @@
+<div class="container">
+  <form>
+    <div class="mb-3">
+      <label for="image-name" class="form-label">Image Name</label>
+      <input type="text" class="form-control" id="image-name" placeholder="Image Name" #imageName>
+    </div>
+    <div class="mb-3">
+      <label for="image-url" class="form-label">Image Url</label>
+      <input type="text" class="form-control" id="image-url" placeholder="https://picsum.photos/400" #imageUrl>
+    </div>
+    <button (click)="getImgNameAndUrl(imageName,imageUrl)" type="button" class="btn btn-success">Show Image</button>
+  </form>
+</div>
