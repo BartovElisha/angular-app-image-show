@@ -14,7 +14,8 @@ export class InputFormComponent implements OnInit {
     url:''
   };
 
-  @Output() onButtonClick = new EventEmitter<string>();
+  // send object to parrent
+  @Output() onButtonClick = new EventEmitter<object>();
 
   getImgNameAndUrl(imageName: HTMLInputElement, imageUrl: HTMLInputElement) {
     console.log(imageName.value);
@@ -27,7 +28,7 @@ export class InputFormComponent implements OnInit {
     imageName.value = '';
     imageUrl.value = '';
 
-    this.onButtonClick.emit(this.image.name); 
+    this.onButtonClick.emit({imgName: this.image.name, imgUrl: this.image.url}); 
   }
 
   ngOnInit(): void {
