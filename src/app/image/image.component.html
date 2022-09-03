@@ -2,7 +2,9 @@
   <div class="card" style="width: 18rem;">
     <img [src]="image.url" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">{{image.name}}</h5>
+      <h5 class="card-title">Image Name: {{image.name}}</h5>
+      <h6 class="card-title">Created At: {{formatDate(image.createdAt)}}</h6>
+      <h6 class="card-title">Rating: {{image.rating}}</h6>
     </div>
   </div>
 </div>

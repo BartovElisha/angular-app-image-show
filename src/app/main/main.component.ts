@@ -11,7 +11,9 @@ export class MainComponent implements OnInit {
 
   image = {
     name:'', 
-    url:''
+    url:'',
+    createdAt: new Date(),
+    rating: 0
   };
 
   ngOnInit(): void {
@@ -23,5 +25,7 @@ export class MainComponent implements OnInit {
 
     this.image.name = event.imgName;
     this.image.url = event.imgUrl;
+    this.image.createdAt = new Date();
+    this.image.rating = 100;
   }
 }
