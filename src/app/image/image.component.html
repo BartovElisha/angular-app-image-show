@@ -5,6 +5,8 @@
       <h5 class="card-title">Image Name: {{image.name}}</h5>
       <h6 class="card-title">Created At: {{formatDate(image.createdAt)}}</h6>
       <h6 class="card-title">Rating: {{image.rating}}</h6>
+      <i (click)="updateRating('inc')" class="fa fa-thumbs-up" style="font-size:48px;color:greenyellow"></i>
+      <i (click)="updateRating('dec')" class="fa fa-thumbs-down" style="font-size:48px;color:red"></i>
     </div>
   </div>
 </div>

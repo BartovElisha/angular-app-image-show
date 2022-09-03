@@ -26,6 +26,20 @@ export class MainComponent implements OnInit {
     this.image.name = event.imgName;
     this.image.url = event.imgUrl;
     this.image.createdAt = new Date();
-    this.image.rating = 100;
+    this.image.rating = 0;
+  }
+
+  updateRating(event: string): void {
+    if(event === 'inc') {
+      if(this.image.rating++ >= 10) {
+        this.image.rating = 10;
+      }
+    } 
+    else if(event === 'dec') {
+      if(this.image.rating-- <= 0) {
+        this.image.rating = 0;
+      }
+    }
+    console.log(`Rating: ${this.image.rating}`);
   }
 }
