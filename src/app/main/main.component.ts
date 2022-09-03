@@ -9,12 +9,19 @@ export class MainComponent implements OnInit {
 
   constructor() { }
 
+  image = {
+    name:'', 
+    url:''
+  };
 
   ngOnInit(): void {
   }
 
-  getImgNameAndUrl(event: any) {
+  getImgNameAndUrl(event: {imgName: string, imgUrl: string}) {
+  // getImgNameAndUrl(event: any) {
     console.log(`object from Form element:${event.imgName}, ${event.imgUrl}`);
 
+    this.image.name = event.imgName;
+    this.image.url = event.imgUrl;
   }
 }

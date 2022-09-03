@@ -15,7 +15,8 @@ export class InputFormComponent implements OnInit {
   };
 
   // send object to parrent
-  @Output() onButtonClick = new EventEmitter<object>();
+  @Output() onButtonClick = new EventEmitter<{imgName: string, imgUrl: string}>();
+  // @Output() onButtonClick = new EventEmitter<object>();
 
   getImgNameAndUrl(imageName: HTMLInputElement, imageUrl: HTMLInputElement) {
     console.log(imageName.value);
